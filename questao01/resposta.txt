@@ -14,7 +14,7 @@ d) 3 - *p/(*q) + 7;
 
 RESPOSTAS:
 
-a) p guardará o endereço de i na memória.
+a) como foi passado o endereço de "i" para "p", esta linha retornará true.
 
 b) o conteúdo de "p" menos o conteúdo de "q" será meramente i - j = -2.
 
@@ -24,4 +24,7 @@ Primeiro, será computado o endereço da variável "p" na memória. depois, ser�
 neste endereço, que por sua vez é o endereço da variável "i". depois, será retornado o conteúdo que se
 encontra neste endereço, que é o próprio valor de i. Então **&p = 3.
 
-d) a ordem das operações se dá na seguinte ordem: (3 - *p/(*q) + 7)
+d) a ordem das operações se dá na seguinte ordem: primeiro *q irá retornar o conteúdo de q, que é 5.
+Depois, *p retornará 3. daí, seguimos a ordem usual das operações: 3 - 3/5 + 7
+a divisão de dois inteiros será o floor da divisão se ambos fossem floats, neste caso 3/5 = 0.6, e seu
+floor é zero, restando 3 + 7 = 10.
