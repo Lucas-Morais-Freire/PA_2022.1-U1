@@ -14,7 +14,7 @@ d) 3 - *p/(*q) + 7;
 
 RESPOSTAS:
 
-a) como foi passado o endereço de "i" para "p", esta linha retornará true.
+a) como foi passado o endereço de "i" para "p", esta linha retornará true (1).
 
 b) o conteúdo de "p" menos o conteúdo de "q" será meramente i - j = -2.
 
