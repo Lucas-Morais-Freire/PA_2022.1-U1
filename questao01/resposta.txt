@@ -1,0 +1,27 @@
+PERGUNTAS:
+
+1. Seja o seguinte trecho de programa:
+int i=3,j=5;
+int *p, *q;
+p = &i;
+q = &j;
+
+Determine o valor das seguintes expressões:
+a) p == &i;
+b) *p - *q;
+c) **&p;
+d) 3 - *p/(*q) + 7;
+
+RESPOSTAS:
+
+a) p guardará o endereço de i na memória.
+
+b) o conteúdo de "p" menos o conteúdo de "q" será meramente i - j = -2.
+
+c) a ordem das operações se dá da seguinte maneira: *(*(&p));
+
+Primeiro, será computado o endereço da variável "p" na memória. depois, será retornado o conteúdo armazenado
+neste endereço, que por sua vez é o endereço da variável "i". depois, será retornado o conteúdo que se
+encontra neste endereço, que é o próprio valor de i. Então **&p = 3.
+
+d) a ordem das operações se dá na seguinte ordem: (3 - *p/(*q) + 7)
