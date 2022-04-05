@@ -7,4 +7,11 @@ printf("%p %d %d %d %d", p,*p+2,**&p,3**p,**&p+4);
 
 RESPOSTAS
 
-o primeiro retorno será o endereço de "i" em hexadecimal: 0x000000000ffe
+    o primeiro retorno será o endereço de "i" em hexadecimal: 0x0000000000000FFE.
+    o segundo será o conteúdo de p mais dois: 5 + 2 = 7.
+    o terceiro será o conteúdo do conteúdo do endereço de p, que será i: 5.
+    no quarto, segundo a ordem das operações, primeiro *p será computado (5), e depois seguimos o resto
+normalmente: 3*(5) = 15.
+    no quinto, já se foi calculado o valor de **&p anteriormente, que é 5, então a resposta será 5 + 4 = 9.
+
+ao todo, no terminal veremos "0x0000000000000FFE 7 5 15 9"
