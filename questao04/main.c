@@ -102,17 +102,34 @@ int main() {
   idade = *p4;
   printf("%d \n", idade);
 
+  /* Aqui, a variável "idade" guarda o conteúdo do endereço "p4", este que agora terá o endereço do
+  próximo inteiro na array "vetor" em relação ao p5. Neste caso, este endereço aponta para o número
+  27, que foi impresso ao atribuir o conteúdo de "p4" para a variável "idade" e imprimindo-a.  */
+
   /* (l) */
   p4 = p4 - 2;
   idade = *p4;
   printf("%d \n", idade);
 
+  /* "p4" foi decrementado em duas unidades, no bloco de código anterior, ele apontava para a terceira
+  posição do array "vetor", agora ele volta a apontar para a primeira, que guarda o número 31, que foi
+  impresso usando o mesmo método do item anterior. */
+
   /* (m) */
   p5 = &vetor[2] - 1;
   printf("%d \n", *p5);
   
+  /* o endereço da segunda posição da array "vetor" aponta para o número 27; ao decrementá-lo em
+  uma unidade, este ponteiro aponta para a posição anterior da array, que neste caso contém o número
+  45. */
+
   /* (n) */
   p5++;
   printf("%d \n", *p5);
+
+  /* ao incrementar o ponteiro p5 em uma unidade, considerando que antes ele apontava para a segunda
+  posição do array "vetor", agora ele estará apontando para a terceira posição, que contém o número
+  27. */
+
   return(0);
 }
