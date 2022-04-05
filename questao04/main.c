@@ -62,9 +62,18 @@ int main() {
   p3 = p3 + 4;
   printf("%c \n", *p3);
 
+  /* O ponteiro "p3" foi declarado como apontando para uma variável do tipo char, que tem tamanho de
+  1 byte. Neste momento, p3 está apontando para o primeiro caractere da string "Ponteiros", e ao
+  incrementá-lo por 4 bytes, ele aponta para o endereço 4 bytes adiante do primeiro caractere, ou seja,
+  para o quinto caractere da string; neste caso, a letra "e", que foi impressa. */
+
   /* (g) */
   p3--;
   printf("%c \n", *p3);
+
+  /* Ao ser decrementado em uma unidade, "p3" aponta para o endereço 3 bytes adiante do primeiro
+  caractere da string "Ponteiros", ou seja, aponta para o endereço onde está guardada a letra "t",
+  que foi impressa. */
 
   /* (h) */
   vetor[0] = 31;
@@ -74,10 +83,19 @@ int main() {
   idade = *p4;
   printf("%d \n", idade);
 
+  /* O ponteiro "vetor" guarda o endereço do primeiro elemento da array. ao atribuir este endereço à
+  "p4", e em seguida o conteúdo deste endereço em "idade", estaremos guardando o inteiro "31" nesta
+  última variável. Ao imprimí-la, constata-se isso. */
+
   /* (i) */
   p5 = p4 +1;
   idade = *p5;
   printf("%d \n", idade);
+
+  /* Aqui, o ponteiro "p5" guarda o mesmo endereço de "p4", incrementado de 1. como "p5" foi declarado
+  como ponteiro de inteiro, isto o fará apontar para o endereço 4 bytes adiante de p4, onde se localiza
+  o próximo inteiro da array "vetor". ou seja, aponta para onde o número "45" foi guardado, que foi
+  impresso. */
 
   /* (j) */
   p4 = p5 + 1;

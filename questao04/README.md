@@ -1,0 +1,1 @@
+respostas para esta questão foram colocadas como comentários no código-fonte "main.c" nesta pasta.
