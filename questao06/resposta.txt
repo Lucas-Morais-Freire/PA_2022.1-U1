@@ -1,0 +1,13 @@
+PERGUNTAS
+
+6. Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o
+valor do terceiro elemento do vetor?
+*(pulo + 2);
+*(pulo + 4);
+pulo + 4;
+pulo + 2;
+
+RESPOSTAS
+
+*(pulo + 2) seria o conteúdo no endereço guardado 8 bytes adiante, correspondendo à terceira posição do 
+vetor "pulo[]".
