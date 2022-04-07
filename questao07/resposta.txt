@@ -1,0 +1,19 @@
+PERGUNTAS
+
+7. Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas?
+Justifique.
+a) p = mat + 1;
+b) p = mat++;
+c) p = ++mat;
+d) x = (*mat)++;
+
+RESPOSTAS
+
+a) p = mat + 1; é válido pois "mat" é um ponteiro e "p" também, então "p" agora aponta para o endereço
+4 bytes à frente do endereço que "mat" guarda.
+
+b) p = mat++; é válido pois é equivalente à operação do item anterior.
+
+c) p = ++mat; não é válido pois o operador "++" deve vir após as variáveis.
+
+d) x = (*mat)++; é válido pois *mat é um inteiro, depois somado com 1 e o resultado guardado em x.
