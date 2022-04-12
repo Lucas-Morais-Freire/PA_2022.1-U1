@@ -16,4 +16,5 @@ b) p = mat++; é válido pois é equivalente à operação do item anterior.
 
 c) p = ++mat; não é válido pois o operador "++" deve vir após as variáveis.
 
-d) x = (*mat)++; é válido pois *mat é um inteiro, depois somado com 1 e o resultado guardado em x.
+d) x = (*mat)++; é válido apenas se foi guardado um valor em mat[0], pois será pego o conteúdo do
+valor guardado neste endereço e será somado 1.
