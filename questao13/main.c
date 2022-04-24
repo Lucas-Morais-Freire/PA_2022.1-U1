@@ -102,32 +102,32 @@ void bubbleSort(float* f, short n) {
 
 int main() {
 
-    srand(time(NULL));
-    short n;
-    
-    printf("digite quantos valores tera o seu array de floats (valor maximo: 10000): ");
-    scanf("%hd", &n);
-    if (n <= 0 || n > 10000) {
-        printf("entrada invalida!");
-        exit(0);
-    }
+  srand(time(NULL));
+  short n;
+  
+  printf("digite quantos valores tera o seu array de floats (valor maximo: 10000): ");
+  scanf("%hd", &n);
+  if (n <= 0 || n > 10000) {
+      printf("entrada invalida!");
+      exit(0);
+  }
 
-    float* nums = malloc(n*sizeof(float));
-    for (int i = 0; i < n; i++) {
-      nums[i] = randomf();
-    }
+  float* nums = malloc(n*sizeof(float));
+  for (int i = 0; i < n; i++) {
+    nums[i] = randomf();
+  }
 
-    for (int i = 0; i < n; i++) {
-      printf("%0.60f\n", nums[i]);
-    }
-    printf("\n");
+  for (int i = 0; i < n; i++) {
+    printf("%0.60f\n", nums[i]);
+  }
+  printf("\n");
 
-    bubbleSort(nums, n);
+  bubbleSort(nums, n);
 
-    for (int i = 0; i < n; i++) {
-      printf("%0.60f\n", nums[i]);
-    }
-    printf("\n");
+  for (int i = 0; i < n; i++) {
+    printf("%0.60f\n", nums[i]);
+  }
+  printf("\n");
 
-    return 0;
+  return 0;
 }
