@@ -28,37 +28,37 @@ float randomf() { // funcao que me gera um float aleatorio (necessita de stdlib.
 }
 
 int cmp(const void* a, const void* b) {
-  if (*(float*)a < *(float*)b) {
+  if (*(float*)a < *(float*)b) { // se a vem antes de b, retornar um valor negativo.
     return -1;
-  } else if (*(float*)a == *(float*)b) {
+  } else if (*(float*)a == *(float*)b) { // se a é equivalente a b, retornar 0.
     return 0;
-  } else {
+  } else { //se não, é porque a é maior que b. Neste caso, retornar um valor negativo.
     return 1;
   }
 }
 
 int main() {
 
-  srand(time(NULL));
-  short n = 0;
+  srand(time(NULL)); // iniciaização da seed para os números aleatórios.
+  short n = 0; // número que guardará o tamanho do array de floats.
   
-  printf("digite quantos valores tera o seu array de floats (valor maximo: 10000): ");
-  scanf("%hd", &n);
-  if (n <= 0 || n > 10000) {
-      printf("entrada invalida!");
-      exit(0);
+  printf("digite quantos valores tera o seu array de floats (valor maximo: 10000): "); //solicitando o valor de n do usuário.
+  scanf("%hd", &n); //colocando em n o valor lido.
+  if (n <= 0 || n > 10000) { //testando se o número é válido (tamanho não pode ser negativo, e também não seria interessante se fosse muito muito alto.)
+      printf("entrada invalida!"); //sinalizar para o usuário que ele inseriu um valor inválido.
+      exit(0); //finalizar o programa.
   }
 
-  float* nums = malloc(n*sizeof(float));
-  for (int i = 0; i < n; i++) {
-    nums[i] = randomf();
-    printf("%0.60f\n", nums[i]);
+  float* nums = malloc(n*sizeof(float)); // alocando memória para o array.
+  for (int i = 0; i < n; i++) { // loop para preencher os valores guardados em "nums"
+    nums[i] = randomf(); // colocando na iésima posição um float aleatório.
+    printf("%0.60f\n", nums[i]); //imprimo na tela o valor guardado  nessa iésima posição (para comparar com a lista ordenada posteriormente)
   }
   printf("\n");
 
-  qsort(nums, n, sizeof(float), cmp);
+  qsort(nums, n, sizeof(float), cmp); // implemento a função qsort, usando a função "cmp" para comparar.
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) { //loop para imprimir novamente o vetor (dessa vez ordenado)
     printf("%0.60f\n", nums[i]);
   }
   printf("\n");
