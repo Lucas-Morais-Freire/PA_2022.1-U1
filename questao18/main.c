@@ -76,13 +76,20 @@ int main() {
     int** C = malloc(la*sizeof(int*));
     C[0] = malloc(la*cb*sizeof(int));
     for (int i = 1; i < la; i++) {
-        C[i] = C[i -1] + cb;
+        C[i] = C[i - 1] + cb;
     }
 
     multMatrix(A, B, C, la, ca, cb);
     
     printf("A*B = C =\n");
     printMatrix(C, la, cb);
+
+    free(A[0]);
+    free(A);
+    free(B[0]);
+    free(B);
+    free(C[0]);
+    free(C);
 
     return 0;
 }
